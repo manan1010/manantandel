@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manan Tandel - Electrical Engineer & AI Visionary</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Palanquin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <div class="relative z-10">
+    <!-- Main Content Wrapper -->
+    <div class="relative z-10">
+
+        <!-- Header -->
+        <header class="fixed top-0 left-0 right-0 z-50">
+            <div class="container mx-auto flex justify-between items-center p-6">
+                <a href="#hero" class="nav-link text-xl font-bold font-cardo">Manan Tandel</a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about-me" class="nav-link hover:text-amber-400 transition-colors">About me</a>
+                    <a href="#resume-page" class="nav-link hover:text-amber-400 transition-colors">Resume</a>
+                    <a href="#projects-page" class="nav-link hover:text-amber-400 transition-colors">Work</a>
+                </nav>
+                <a href="#contact-section" class="hidden md:inline-block bg-accent text-black font-bold py-2 px-5 rounded-md hover:bg-amber-500 transition-colors">Get in Touch</a>
+                <button id="menu-btn" class="md:hidden p-2 rounded-md text-gray-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+             <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-black p-4">
+                <a href="#about-me" class="nav-link block py-2 px-4 text-sm hover:bg-gray-800 rounded-md">About me</a>
+                <a href="#resume-page" class="nav-link block py-2 px-4 text-sm hover:bg-gray-800 rounded-md">Resume</a>
+                <a href="#projects-page" class="nav-link block py-2 px-4 text-sm hover:bg-gray-800 rounded-md">Work</a>
+                <a href="#contact-section" class="nav-link block py-2 px-4 text-sm hover:bg-gray-800 rounded-md">Get in Touch</a>
+            </div>
+        </header>
+
+        <!-- Main Page Content -->
+        <div id="main-page" class="page active">
+            <!-- Hero Section -->
+            <section id="hero" class="min-h-screen relative flex items-center justify-center overflow-hidden p-4">
+                <div class="hero-bg-text font-cardo">
+    <div class="opacity-100">Portfolio</div>  <!-- Most visible -->
+    <div class="opacity-90">Portfolio</div>   <!-- Slight fade -->
+    <div class="opacity-80">Portfolio</div>   <!-- Lightest fade -->
+</div>
+                
+                <div class="relative z-10 grid md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
+                    <!-- Left Column -->
+                    <div class="relative flex justify-center h-[28rem]">
+                        <!-- Background Shape -->
+                        <div class="absolute w-full h-full max-w-sm bg-amber-500/10 rounded-2xl transform -rotate-6 top-0"></div>
+                        <!-- Image -->
+                        <img src="meee.png" alt="Manan Tandel" class="relative z-10 w-80 h-[26rem] rounded-2xl object-cover shadow-2xl self-center"
+                             onerror="this.onerror=null;this.src='https://placehold.co/320x416/111827/FFFFFF?text=MT';">
+                        <!-- Small text box -->
+                        <div class="absolute z-20 -bottom-4 -left-4 bg-black p-4 rounded-lg max-w-[220px] shadow-lg border border-gray-700">
+                            <p class="text-xs text-gray-400">
+                                Innovation is seeing what everybody has seen and thinking what nobody has thought.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Right Column -->
+                    <div class="text-center md:text-left">
+                        <h1 id="name-heading" class="text-5xl md:text-8xl font-bold font-cardo tracking-wider mb-4">&nbsp;</h1>
+                        <p class="text-lg text-gray-400 mb-1">
+
+                        </p>
+                        <a href="" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-amber-400 transition-colors duration-300">
+                                        <img src="mail_icon.png" alt="GMail" class="w-6 h-6 mr-2">
+                                        <span>tandelmanan133@gmail.com</span>                                 
+                                    </a>
+                        
+                        
+                        <a href="www.linkedin.com/in/manan1010" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-amber-400 transition-colors duration-300">
+                                        <img src="linkedin_icon.svg" alt="LinkedIn" class="w-6 h-6 mr-2">
+                                        <span>/manan1010</span>    
+                                    </a>
+                    </div>
+                </div>
+                
+            </section>
+            </section> <!-- end of #hero -->
+
+<!-- Scroll Button Between Sections -->
+<div class="relative -mt-12 z-30 flex justify-center">
+  <a href="#about-me" class="z-30">
+    <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-black font-bold text-center text-sm leading-tight animate-bounce shadow-lg">
+      Scroll<br>down
+    </div>
+  </a>
+</div>
+
+<section id="about-me" class="py-24 px-4 container mx-auto">
+
+            <!-- About Me Section -->
+            <section id="about-me" class="py-24 px-4 container mx-auto">
+                <div class="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
+                    <!-- Left Column -->
+                    <div>
+                        <h2 class="text-6xl font-bold font-cardo mb-8">Hello, <br>I'm Manan!</h2>
+                        <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                            I'm a passionate Electrical Engineering student with a zeal for technology and innovation. I thrive on tackling challenges, exploring cutting-edge technologies, and developing solutions that make a real impact.
+                        </p>
+                        <a href="https://drive.google.com/file/d/1qAkATXZyMM5oxOTs2NhkUhCTDqjzkhhB/view?usp=sharing" class="resume-download-btn inline-block bg-accent text-black font-bold py-3 px-8 rounded-md hover:bg-amber-500 transition-colors">
+                            Download Resume
+                        </a>
+                        
+                    </div>
+                    <!-- Right Column -->
+                    <div class="relative">
+                        <div class="absolute -top-8 -right-8 w-full h-full bg-gray-800 rounded-2xl z-0"></div>
+                        <img src="meee.png" alt="Manan Tandel" class="relative z-10 w-full h-auto rounded-2xl"
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x500/111827/FFFFFF?text=MT';">
+                    </div>
+                </div>
+            </section>
+
+            <section id="major-skills" class="py-24 px-4 container mx-auto text-center">
+                <h2 class="text-4xl font-bold font-cardo mb-12">Major Skills</h2>
+                <div class="flex flex-wrap justify-center items-center gap-4 max-w-4xl mx-auto">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Machine Learning Models</span>
+                    <span class="skill-tag">OpenCV</span>
+                    <span class="skill-tag">YOLOv8</span>
+                    <span class="skill-tag">Image Processing</span>
+                    <span class="skill-tag">Artificial Intelligence</span>
+                    <span class="skill-tag">MATLAB</span>
+                    <span class="skill-tag">Microcontrollers</span>
+                    <span class="skill-tag">IoT</span>
+                    <span class="skill-tag">Embedded Systems</span>
+                    <span class="skill-tag">Raspberry Pi</span>
+                    <span class="skill-tag">Graphic Design</span>
+                    <span class="skill-tag">Video Editing</span>
+                    <span class="skill-tag">Predictive AI/ML models</span>
+                </div>
+            </section>
+            
+            <!-- Contact Form Section -->
+            <section id="contact-section" class="py-24 px-4 bg-gray-900">
+                <div class="container mx-auto max-w-3xl text-center">
+                    <h2 class="text-4xl font-bold font-cardo mb-12">Get In Touch</h2>
+                    <form class="space-y-6 text-left">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="text" placeholder="First Name" required class="bg-gray-800 border border-gray-700 w-full p-3 rounded-md focus:outline-none focus:border-amber-400">
+                            <input type="text" placeholder="Last Name" required class="bg-gray-800 border border-gray-700 w-full p-3 rounded-md focus:outline-none focus:border-amber-400">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="email" placeholder="Email" required class="bg-gray-800 border border-gray-700 w-full p-3 rounded-md focus:outline-none focus:border-amber-400">
+                            <input type="tel" placeholder="Phone" required class="bg-gray-800 border border-gray-700 w-full p-3 rounded-md focus:outline-none focus:border-amber-400">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Company Name (Optional)" class="bg-gray-800 border border-gray-700 w-full p-3 rounded-md focus:outline-none focus:border-amber-400">
+                        </div>
+                        <div>
+                            <textarea placeholder="Message" rows="5" required class="bg-gray-800 border border-gray-700 w-full p-3 rounded-md focus:outline-none focus:border-amber-400"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-accent text-black font-bold py-3 px-12 rounded-md hover:bg-amber-500 transition-colors text-lg">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+         <!-- resume_page -->
+
+        <div id="resume-page" class="page">
+    <section class="py-24 px-4 container mx-auto min-h-screen pt-32">
+        <div class="grid md:grid-cols-3 gap-16 max-w-6xl mx-auto">
+            <div class="md:col-span-2">
+                <h2 class="text-5xl font-bold font-cardo mb-12">Resume</h2>
+                <div class="space-y-12">
+                    <div>
+                        <h3 class="text-3xl font-bold font-cardo mb-6 border-b-2 border-amber-400 pb-2">Education</h3>
+                        <div class="relative pl-8 timeline-item mb-8">
+                            <p class="font-bold text-lg">2022 - 2026</p>
+                            <h4 class="text-xl font-semibold text-amber-400">B.E. in Electrical Engineering</h4>
+                            <p class="text-gray-400">L.D. College of Engineering</p>
+                        </div>
+                        <div class="relative pl-8 timeline-item">
+                            <p class="font-bold text-lg">2023 - 2026</p>
+                            <h4 class="text-xl font-semibold text-amber-400">Minors in Electrical Vehicles</h4>
+                            <p class="text-gray-400">L.D. College of Engineering</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold font-cardo mb-6 border-b-2 border-amber-400 pb-2">Experience</h3>
+                        <div class="space-y-8">
+                            <div class="relative pl-8 timeline-item">
+                                <p class="font-bold text-lg">2025 - Present</p>
+                                <h4 class="text-xl font-semibold text-amber-400">Intern at Sah Astitva</h4>
+                                <div class="experience-description">
+                                    <p class="text-gray-400">
+                                        Led the development of an on-field system for monitoring vegetation and crop health using IoT. My role involved integrating various sensors (NDVI, soil moisture, temperature) with an ESP32 microcontroller. I developed a real-time data pipeline to the Blynk platform, enabling remote monitoring and automated alerts for farmers, which contributed to a 15% improvement in crop management efficiency during trials.
+                                    </p>
+                     
+                                </div>
+                            </div>
+                            <div class="relative pl-8 timeline-item">
+                                <p class="font-bold text-lg">2025</p>
+                                <h4 class="text-xl font-semibold text-amber-400">Intern at The Elite Pro</h4>
+                                <div class="experience-description">
+                                     <p class="text-gray-400">
+                                        Worked on a high-stakes project to implement real-time object detection on an Nvidia Jetson Nano. I was responsible for optimizing a YOLOv4 model using TensorRT and deploying it with the DeepStream SDK. This successfully increased inference speed by 40% while maintaining 92% accuracy, allowing for effective real-time application in a simulated security environment.
+                                    </p>
+                                    <button class="view-more-btn">View More</button>
+                                </div>
+                                <div class="experience-links">
+                                    <a href="https://www.theelitepro.in/" target="_blank" title="Company Website" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-amber-400 transition-colors duration-300">
+                                        <img src="elite_pro_logo.png" alt="The Elite Pro Logo" class="company-logo">
+                                    </a>
+                                    
+                                    <a href="https://www.linkedin.com/posts/manan1010_electricalengineering-ldce-aionedge-activity-7326948354477723649-pOG-?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-amber-400 transition-colors duration-300">
+                                        <img src="linkedin_icon.svg" alt="LinkedIn" class="w-6 h-6 mr-2">
+                                        
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                            <div class="relative pl-8 timeline-item">
+                                <p class="font-bold text-lg">2024 - 2025</p>
+                                <h4 class="text-xl font-semibold text-amber-400">Prakalpa LDCE Club Head</h4>
+                                 <div class="experience-description">
+                                     <p class="text-gray-400">
+                                        As the head of the college's premier project-based club, I managed a team of 30 students and oversaw more than 10 technical projects from ideation to completion. I organized and led workshops on topics like IoT, Embedded Systems, and AI, which increased active club membership by over 50%. My leadership was key to our team winning the Smart Gujarat Hackathon.
+                                    </p>
+                                    <button class="view-more-btn">View More</button>
+                                </div>
+                                <div class="experience-links">
+                                    <a href="https://www.linkedin.com/company/prakalpa-ldce/?originalSubdomain=in" target="_blank" title="Prakalpa LinkedIn">
+                                        <img src="linkedin_icon.svg" alt="Instagram" class="w-6 h-6 mr-2">
+                                    </a>
+                                    <a href="https://www.instagram.com/ldce_prakalpa/" target="_blank" title="Prakalpa Instagram">
+                                        <img src="insta_logo.png" alt="Instagram" class="w-6 h-6 mr-2">
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div>
+                        <h3 class="text-3xl font-bold font-cardo mb-12 mt-16 border-b-2 border-amber-400 pb-2">Languages</h3>
+                        <div class="space-y-8 pl-8">
+                             <div class="language-item">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-xl font-semibold">English 🇬🇧</span>
+                                    <span class="text-lg text-amber-400"></span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="language-item">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-xl font-semibold">Gujarati 🇮🇳</span>
+                                    <span class="text-lg text-amber-400"></span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                            <div class="language-item">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-xl font-semibold">Hindi 🇮🇳</span>
+                                    <span class="text-lg text-amber-400"></span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-3xl font-bold font-cardo md:mt-24 mb-6">Skills</h3>
+                <div class="chart-container mb-12">
+                    <h4 class="text-xl font-semibold text-center mb-4 text-amber-400">Technical Skills</h4>
+                    <canvas id="technicalSkillsChart"></canvas>
+                </div>
+                <div class="chart-container mb-12">
+                    <h4 class="text-xl font-semibold text-center mb-4 text-amber-400">Languages</h4>
+                    <canvas id="languagesChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h4 class="text-xl font-semibold text-center mb-4 text-amber-400">Soft Skills</h4>
+                    <canvas id="softSkillsChart"></canvas>
+                </div>
+                <h3 class="text-3xl font-bold font-cardo mt-12 mb-6">Achievements</h3>
+                <div class="space-y-4">
+                    <p class="bg-gray-800 p-3 rounded-md">Winner, Smart Gujarat Hackathon</p>
+                    <p class="bg-gray-800 p-3 rounded-md">Winner, Hack The Spring (GEC)</p>
+                    <p class="bg-gray-800 p-3 rounded-md">2nd Place, Smart India Hackathon</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-20">
+            <a href="https://drive.google.com/file/d/1qAkATXZyMM5oxOTs2NhkUhCTDqjzkhhB/view?usp=sharing" class="resume-download-btn inline-block bg-accent text-black font-bold py-4 px-12 rounded-md hover:bg-amber-500 transition-colors text-lg">
+               Download Full Resume
+           </a>
+       </div>
+    </section>
+</div>
+                   
+
+        <!-- Projects Page Content -->
+<div id="projects-page" class="page">
+    <section class="py-24 px-4 container mx-auto min-h-screen flex flex-col items-center justify-center overflow-hidden">
+        <h2 class="text-5xl font-bold font-cardo text-center mb-16">Work</h2>
+
+        <div id="project-carousel" class="relative w-full max-w-4xl h-[500px]">
+            <div class="carousel-track">
+                <div class="carousel-slide" data-project="project-power-calc" data-status="active"><img src="Blink_counter.jpeg" alt="Power Consumption Calculator"></div>
+                <div class="carousel-slide" data-project="project-ai-wearable" data-status="unknown"><img src="manan1.jpeg" alt="AI-Powered Wearable"></div>
+                <div class="carousel-slide" data-project="project-ai-wearable" data-status="unknown"><img src="manan2.jpeg" alt="AI-Powered Wearable Data"></div>
+                <div class="carousel-slide" data-project="project-visitor-safety" data-status="unknown"><img src="smart_band.png" alt="Smart Band for Visitor Safety"></div>
+                <div class="carousel-slide" data-project="project-iot-streetlight" data-status="unknown"><img src="manan3.jpeg" alt="IoT Smart Street Light"></div>
+                <div class="carousel-slide" data-project="project-leadership" data-status="unknown"><img src="manan4.jpeg" alt="Project Leadership"></div>
+                <div class="carousel-slide" data-project="project-hackathon" data-status="unknown"><img src="manan5.jpeg" alt="Hackathon Showcase"></div>
+                <div class="carousel-slide" data-project="project-yolo-streetlight" data-status="unknown"><img src="manan6.jpeg" alt="AI Streetlight with YOLOv8"></div>
+                <div class="carousel-slide" data-project="project-internship" data-status="unknown"><img src="manan7.jpeg" alt="Internship at TheElitePro"></div>
+            </div>
+        </div>
+
+        <div class="carousel-nav mt-8">
+            <button id="prev-btn" class="nav-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+            </button>
+            <button id="next-btn" class="nav-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+            </button>
+        </div>
+        
+        <div id="project-details-container" class="mt-24 max-w-4xl mx-auto w-full">
+            <article id="project-power-calc" class="project-detail">
+                <h3 class="text-3xl font-bold font-cardo mb-2 text-amber-400">Real-Time Power Consumption & Cost Calculator</h3>
+                <p class="text-lg text-gray-400 mb-8">This project introduces a non-invasive, cost-effective device for monitoring household electricity consumption in real time. By optically reading the LED blink rate on a standard utility meter, the system calculates and displays power usage (in kWh) and its associated cost. The core objective is to provide homeowners with immediate, actionable data, fostering energy awareness and enabling significant cost savings.</p>
+                <div class="grid md:grid-cols-2 gap-8 text-gray-300 leading-relaxed">
+                    <div>
+                        <h4 class="font-semibold text-xl mb-3">Key Features & Quantitative Impact</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><strong>High-Accuracy Blink Detection:</strong> Utilizes a sensitive Light Dependent Resistor (LDR) to monitor the energy meter’s pulse LED. The system is calibrated based on the meter's standard (e.g., 1000 blinks/kWh), achieving <strong>>99% accuracy</strong> in detecting energy consumption pulses.</li>
+                            <li><strong>Real-Time Data Display:</strong> An integrated LED display provides instantaneous feedback on accumulated power consumption in kilowatt-hours (kWh) and the total estimated cost, updated in real time.</li>
+                            <li><strong>Adjustable Cost Tariff:</strong> Features a potentiometer that allows the user to manually set the per-unit electricity cost (e.g., from ₹3 to ₹15/unit), ensuring the financial calculations remain accurate even when utility rates change.</li>
+                            <li><strong>Informed Energy Savings:</strong> By providing transparent usage data, the device empowers users to identify high-consumption patterns and make informed decisions, potentially <strong>reducing monthly electricity bills by 10-20%</strong>.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-xl mb-3">Technical Specifications</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><strong>Sensing Mechanism:</strong> High-sensitivity LDR sensor for non-invasive optical pulse detection.</li>
+                            <li><strong>Core Processor:</strong> ATmega328P microcontroller, serving as the central processing unit.</li>
+                            <li><strong>User Interface:</strong> 4-digit 7-segment LED display.</li>
+                            <li><strong>Input Controls:</strong> Onboard potentiometer for tariff adjustment and a tactile reset button.</li>
+                            <li><strong>Power Supply:</strong> Standard 5V DC input.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article id="project-ai-wearable" class="project-detail">
+                <h3 class="text-3xl font-bold font-cardo mb-2 text-amber-400">AI-Powered Wearable for Elderly Fall Prevention</h3>
+                <p class="text-lg text-gray-400 mb-8">This project, developed for the Smart India Hackathon 2024, is an advanced AI-powered wearable designed to predict and prevent falls in the elderly. This proactive approach aims to significantly reduce fall-related injuries. Our work on this project secured the <strong>2nd position</strong> in the internal institutional hackathon.</p>
+                <div class="grid md:grid-cols-2 gap-8 text-gray-300 leading-relaxed">
+                    <div>
+                        <h4 class="font-semibold text-xl mb-3">Methodology & Technical Achievements</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><strong>Data Corpus Creation:</strong> A comprehensive dataset was built by collecting over <strong>100,000 rows</strong> of 3-axis gyroscope and accelerometer data.</li>
+                            <li><strong>Advanced AI/ML Modeling:</strong> A hybrid <strong>LSTM-CNN model</strong> demonstrated superior performance, achieving a <strong>fall detection accuracy of 97.8%</strong>.</li>
+                            <li><strong>Prototype Evolution:</strong> Upgraded from a breadboard proof-of-concept to a robust FR4 veroboard integrating IMU, GSM, and nRF2401 modules.</li>
+                            <li><strong>Mobile Integration:</strong> A cross-platform <strong>Flutter application</strong> was developed for monitoring and alerts.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-xl mb-3">Technical Specifications</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><strong>Core Sensors:</strong> MPU-6050 IMU (6-axis Gyroscope + Accelerometer).</li>
+                            <li><strong>Connectivity:</strong> SIM800L GSM module and nRF2401.</li>
+                            <li><strong>Processing Unit:</strong> Arduino/ESP32 microcontroller.</li>
+                            <li><strong>Software & AI:</strong> LSTM-CNN, ARIMA, SARIMA; Programmed in Python, C++, and Dart (Flutter).</li>
+                        </ul>
+                        <img src="1731617360285.jpeg" alt="Real-Time AI Project in action" class="mt-6 rounded-lg shadow-lg w-full h-auto">
+                    </div>
+                </div>
+            </article>
+            
+            <article id="project-visitor-safety" class="project-detail">
+                <h3 class="text-3xl font-bold font-cardo mb-2 text-amber-400">Smart Band for Visitor Safety & Emergency Response</h3>
+                <p class="text-lg text-gray-400 mb-8">Designed to enhance safety at public venues like Kankaria Lake, this Smart Band is a wearable IoT device that provides a comprehensive safety net for visitors, especially the elderly and children, by integrating tracking, fall detection, and manual alerts.</p>
+                 <div class="grid md:grid-cols-2 gap-8 text-gray-300 leading-relaxed">
+                    <div>
+                        <h4 class="font-semibold text-xl mb-3">Core Features & Technology</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                           <li><strong>Automatic Fall Detection:</strong> An MPU-6050 sensor detects falls with <strong>>95% accuracy</strong>, automatically alerting a control center.</li>
+                           <li><strong>Real-Time Location Tracking:</strong> A built-in GPS module tracks the wearer's location with a precision of <strong>within 5 meters</strong>.</li>
+                           <li><strong>One-Press Emergency Button:</strong> An SOS button allows visitors to manually trigger an alert, reducing response times by an <strong>estimated 40%</strong>.</li>
+                           <li><strong>Centralized Monitoring:</strong> A central dashboard enables efficient coordination of emergency services.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-xl mb-3">Technical Specifications</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                           <li><strong>Motion Sensing:</strong> MPU-6050 (3-axis Gyroscope, 3-axis Accelerometer).</li>
+                           <li><strong>Location Services:</strong> Neo-6M GPS Module.</li>
+                           <li><strong>Connectivity & Processing:</strong> ESP32 or NodeMCU.</li>
+                           <li><strong>User Input:</strong> Tactile push-button for manual alerts.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article id="project-iot-streetlight" class="project-detail">
+                <h3 class="text-3xl font-bold font-cardo mb-2 text-amber-400">IoT-Enabled Smart Street Light Module</h3>
+                <p class="text-lg text-gray-400 mb-8">This project is a modular, retrofittable IoT system designed to transform conventional streetlights into intelligent, energy-efficient, and safe urban infrastructure nodes, forming the foundation of a smart city grid.</p>
+                <div class="grid md:grid-cols-2 gap-8 text-gray-300 leading-relaxed">
+                    <div>
+                        <h4 class="font-semibold text-xl mb-3">Core Functionality & Quantitative Benefits</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                           <li><strong>Adaptive Illumination:</strong> Dynamically controls light intensity based on motion, achieving an estimated <strong>energy reduction of up to 60%</strong>.</li>
+                           <li><strong>Instant Emergency Alerting:</strong> An integrated panic button sends a GPS-tagged SMS alert to first responders <strong>within 5 seconds</strong>.</li>
+                           <li><strong>Predictive Maintenance:</strong> Onboard sensors monitor electrical health and send automated fault alerts, <strong>reducing downtime by over 75%</strong>.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-xl mb-3">Technical Specifications</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                           <li><strong>Processing Unit:</strong> NodeMCU (ESP8266).</li>
+                           <li><strong>Sensors:</strong> PIR, LDR, Voltage, and Current sensors.</li>
+                           <li><strong>Communication:</strong> GSM 900A and Neo-6M GPS modules.</li>
+                           <li><strong>Future Roadmap:</strong> Designed to support AI cameras and 5G integration.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article id="project-leadership" class="project-detail">
+                <h3 class="text-3xl font-bold font-cardo mb-2 text-amber-400">Leading the Vision for Smart Urban Infrastructure</h3>
+                 <p class="text-lg text-gray-400 mb-8">Presenting our Smart Street Light module was about articulating a vision for safer, more efficient cities. As the project lead, my role extended beyond technical implementation to encompass the entire project lifecycle.</p>
+                <div class="grid md:grid-cols-2 gap-8 text-gray-300 leading-relaxed">
+                    <div>
+                        <h4 class="font-semibold text-xl mb-3">Leadership & Project Management</h4>
+                        <p>I spearheaded the project roadmap, defining key milestones and delegating tasks across the team. I was responsible for maintaining momentum, facilitating communication, and ensuring our final product was robust, scalable, and aligned with our initial goals.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-xl mb-3">System Architecture & Presentation</h4>
+                        <p>I designed the end-to-end system architecture and focused on clearly communicating the "why" behind our work—the tangible benefits in energy savings and public safety. This experience honed my public speaking skills and taught me how to effectively advocate for a technology-driven solution.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article id="project-hackathon" class="project-detail">
+                <h3 class="text-3xl font-bold font-cardo mb-2 text-amber-400">Hackathon Resilience: "Hack The Spring" Showcase</h3>
+                <p class="text-lg text-gray-400 mb-8">The "Hack The Spring" hackathon was a 36-hour marathon of innovation, pressure, and perseverance. Securing <strong>6th place</strong> among a field of talented teams was validation of our hard work, resilience, and collaborative spirit.</p>
+                <div class="grid md:grid-cols-1 gap-8 text-gray-300 leading-relaxed">
+                    <div>
+                        <h4 class="font-semibold text-xl mb-3">Overcoming Challenges</h4>
+                        <p>We hit a wall with a critical bug in the communication protocol between our microcontroller and the GSM module. After hours of systematic debugging, we traced the issue to a subtle power fluctuation. The joy in that moment was immense, a powerful reminder that debugging is not just about fixing errors; it's about deepening your understanding. This experience taught me that success in engineering is often born from the persistence to push through challenges when it feels easiest to quit.</p>
+                    </div>
+                </div>
+            </article>
+            
+            <article id="project-yolo-streetlight" class="project-detail">
+    <h3 class="text-3xl font-bold font-cardo mb-2 text-amber-400">AI-Powered Smart Street Light with YOLOv8</h3>
+    <p class="text-lg text-gray-400 mb-8">This project represents a significant leap from a sensor-based system to a fully intelligent, AI-driven platform. My core responsibility was to design and implement the computer vision pipeline.</p>
+    
+    <div class="grid md:grid-cols-2 gap-8 text-gray-300 leading-relaxed">
+        <div>
+            <h4 class="font-semibold text-xl mb-3">My Contributions (AI/ML Pipeline)</h4>
+            <ul class="space-y-2 list-disc list-inside">
+                <li><strong>Real-Time Vision Processing:</strong> Developed the host-based AI on macOS, utilizing the M1 GPU for accelerated processing of a 720p @ 30 FPS video stream.</li>
+                <li><strong>Object Detection & Tracking:</strong> Fine-tuned a <strong>YOLOv8-Nano</strong> model and integrated <strong>DeepSORT</strong> for robust object tracking, achieving an inference speed of ~<strong>20ms per frame</strong>.</li>
+                <li><strong>Anomaly & Speed Detection:</strong> Implemented a 4-point homography transformation for accurate speed estimation and wrote logic to detect collisions and sudden stops (deceleration > 6 m/s²).</li>
+                <li><strong>System Integration:</strong> Designed a <strong>JSON-based serial protocol</strong> to bridge the host AI with the Arduino microcontroller for event-driven actions.</li>
+            </ul>
+        </div>
+        
+        <div>
+            <h4 class="font-semibold text-xl mb-3">Team Behind the Innovation</h4>
+            <ul class="space-y-2 list-disc list-inside">
+                <li><strong>Manan Tandel (Me):</strong> AI/ML Development</li>
+                <li><strong>Karan Prajapati:</strong> System Architecture Design</li>
+                <li><strong>Henil Patel:</strong> Hardware Build-Up</li>
+                <li><strong>Ayush Tarsadiya:</strong> Hardware Support</li>
+                <li><strong>Sahil Vadera:</strong> Research & Presentation</li>
+            </ul>
+
+            <div class="mt-6">
+                <h4 class="font-semibold text-xl mb-3">Project Links</h4>
+                <div class="flex items-center space-x-4">
+                    <a href="https://www.linkedin.com/posts/manan1010_ai-machinelearning-smartcities-activity-7325570854711443456-6nXO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_qOxkBS67Q9b54jtJ-hxB97DuCIUrSJ5A" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-amber-400 transition-colors duration-300">
+                        <img src="linkedin_icon.svg" alt="LinkedIn Logo" class="w-6 h-6 mr-2">
+                        <span>View on LinkedIn</span>
+                    </a>
+                    <a href="https://youtu.be/eUqDdE25pxg?feature=shared" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-amber-400 transition-colors duration-300">
+                        <img src="yt_icon.png" alt="YouTube Logo" class="w-6 h-6 mr-2">
+                        <span>Watch Explanation</span>
+                    </a>
+                </div>
+            </div>
+            </div>
+        
+        <img src="ss2.png" alt="Real-Time AI Project in action" class="mt-6 rounded-lg shadow-lg w-full h-auto md:col-span-1">
+        <img src="ss1.png" alt="Real-Time AI Project in action" class="mt-6 rounded-lg shadow-lg w-full h-auto md:col-span-1">
+    </div>
+</article>
+
+            <article id="project-internship" class="project-detail">
+                <h3 class="text-3xl font-bold font-cardo mb-2 text-amber-400">Internship: Real-Time AI on the Edge at TheElitePro</h3>
+                <p class="text-lg text-gray-400 mb-8">My one-month internship at TheElitePro was a pivotal opportunity to dive into the world of edge AI. My project was "Real-Time Object Detection and Face Swapping on an NVIDIA Jetson using the DeepStream SDK." I successfully completed the internship with a <strong>₹10,000 Stipend</strong>.</p>
+                <div class="grid md:grid-cols-1 gap-8 text-gray-300 leading-relaxed">
+                    <div>
+                        <h4 class="font-semibold text-xl mb-3">Key Technical Accomplishments & Learnings</h4>
+                        <ul class="space-y-2 list-disc list-inside">
+                            <li><strong>Built a Complete DeepStream Pipeline:</strong> Successfully ingested and processed a live RTSP stream on the NVIDIA Jetson edge device.</li>
+                            <li><strong>Implemented Multi-Stage AI Models:</strong> The pipeline included <strong>YOLOv8</strong> for object detection, advanced trackers for face recognition, and a <strong>ReSwapper</strong> model for live face swapping.</li>
+                            <li><strong>Performance Optimization:</strong> I worked extensively with different precision modes (FP32, FP16, INT8) and utilized the Jetson's Deep Learning Accelerators (DLA) to achieve the lowest possible latency.</li>
+                        </ul>
+                        <p class="mt-4">This internship solidified my belief that you don't need to switch fields to follow a passion; you can enrich your core discipline with new skills. I am immensely grateful to TheElitePro for the trust, guidance, and opportunity to work on the cutting edge of technology.</p>
+                        <a href="https://www.linkedin.com/posts/manan1010_electricalengineering-ldce-aionedge-activity-7326948354477723649-pOG-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_qOxkBS67Q9b54jtJ-hxB97DuCIUrSJ5A" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-amber-400 transition-colors duration-300">
+                        <img src="linkedin_icon.svg" alt="LinkedIn Logo" class="w-6 h-6 mr-2">
+                        <span>View on LinkedIn</span>
+                    </a>
+                    </div>
+                        <img src="1746880614332.jpeg" alt="Real-Time AI Project in action" class="mt-6 rounded-lg shadow-lg w-full h-auto">
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>
+        
+
+        <footer class="py-6 px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Manan Tandel.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
