@@ -22,10 +22,31 @@ document.querySelectorAll('a, button, input[type="submit"]').forEach(el => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Custom Cursor Logic ---
+    const cursor = document.querySelector('.custom-cursor');
+    // Only initialize custom cursor on non-touch devices
+    if (window.matchMedia('(pointer: fine)').matches) {
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.addEventListener('mousedown', () => {
+            cursor.classList.add('click');
+        });
+
+        document.addEventListener('mouseup', () => {
+            cursor.classList.remove('click');
+        });
+
+        document.querySelectorAll('a, button, input[type="submit"]').forEach(el => {
+            el.addEventListener('mouseover', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseout', () => cursor.classList.remove('hover'));
+        });
+    }
 
 
-
- // --- PROJECT CAROUSEL LOGIC ---
+    // --- PROJECT CAROUSEL LOGIC ---
     const carousel = document.getElementById('project-carousel');
     const carouselTrack = document.querySelector('.carousel-track');
 
@@ -38,11 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const updateProjectDetails = (activeSlide) => {
             // Hide all details first
             projectDetails.forEach(detail => detail.classList.remove('active'));
-            
+
             // Get the ID to show
             const projectId = activeSlide.dataset.project;
             const activeDetail = document.getElementById(projectId);
-            
+
             if (activeDetail) {
                 activeDetail.classList.add('active');
             }
@@ -66,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[activeIndex].dataset.status = 'active';
             slides[prevIndex].dataset.status = 'prev';
             slides[nextIndex].dataset.status = 'next';
-            
+
             updateProjectDetails(activeSlide);
         };
 
@@ -74,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let activeSlide = document.querySelector('.carousel-slide[data-status="active"]');
             let activeIndex = slides.indexOf(activeSlide);
             const nextIndex = (activeIndex + 1) % slides.length;
-            
+
             activeSlide.dataset.status = 'unknown';
             slides[nextIndex].dataset.status = 'active';
             setSlideStatus();
@@ -89,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[prevIndex].dataset.status = 'active';
             setSlideStatus();
         };
-        
+
         nextButton.addEventListener('click', moveToNextSlide);
         prevButton.addEventListener('click', moveToPrevSlide);
 
@@ -100,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-     // --- SKILLS RADAR CHARTS LOGIC ---
+    // --- SKILLS RADAR CHARTS LOGIC ---
     const chartFontColor = '#A9A9A9'; // A light gray for readability
     const chartGridColor = 'rgba(255, 255, 255, 0.1)';
 
@@ -198,28 +219,31 @@ document.addEventListener('DOMContentLoaded', () => {
             options: chartOptions
         });
     }
-    
-    
+
+
     // --- Typing Animation for Hero Name ---
     const nameHeading = document.getElementById('name-heading');
     const nameToType = "Manan Tandel";
     const typingSpeed = 150; // Milliseconds per character
 
     // Clear the placeholder and add the cursor
-    nameHeading.innerHTML = '<span id="typed-text"></span><span class="blinking-cursor"></span>';
-    const typedTextSpan = document.getElementById('typed-text');
-    
-    let charIndex = 0;
-    function typeChar() {
-        if (charIndex < nameToType.length) {
-            typedTextSpan.textContent += nameToType.charAt(charIndex);
-            charIndex++;
-            setTimeout(typeChar, typingSpeed);
+    if(nameHeading) {
+        nameHeading.innerHTML = '<span id="typed-text"></span><span class="blinking-cursor"></span>';
+        const typedTextSpan = document.getElementById('typed-text');
+        
+        let charIndex = 0;
+        function typeChar() {
+            if (charIndex < nameToType.length) {
+                typedTextSpan.textContent += nameToType.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeChar, typingSpeed);
+            }
         }
+        // Start the animation shortly after the page loads
+        setTimeout(typeChar, 500);
     }
-    // Start the animation shortly after the page loads
-    setTimeout(typeChar, 500);
 
+    // --- PAGE NAVIGATION LOGIC ---
     const navLinks = document.querySelectorAll('.nav-link');
     const pages = document.querySelectorAll('.page');
     const mainPage = document.getElementById('main-page');
@@ -245,7 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
-        navLinks.forEach(link => {
+        // Update active state for all nav links (desktop and mobile)
+        document.querySelectorAll('.nav-link').forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === targetId) {
                 link.classList.add('active');
@@ -253,36 +278,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    navLinks.forEach(link => {
+    // Desktop navigation
+    document.querySelectorAll('header .hidden.md\\:flex .nav-link').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('href');
             showPage(targetId);
-            mobileMenu.classList.add('hidden');
         });
     });
 
-    // --- Resume Download Button ---
-    document.getElementById('resume-download-btn').addEventListener('click', (e) => {
-        e.preventDefault();
-        const resumeUrl = 'https://drive.google.com/file/d/1qAkATXZyMM5oxOTs2NhkUhCTDqjzkhhB/view?usp=sharing'; 
-        if (resumeUrl === '#') {
-            alert('Resume PDF path not configured yet.');
-            return;
-        }
-        const a = document.createElement('a');
-        a.href = resumeUrl;
-        a.download = 'Manan_Tandel_Resume.pdf';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+    // Mobile navigation
+    const mobileNavLinks = document.querySelectorAll('#mobile-menu .nav-link');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            showPage(targetId);
+            mobileMenu.classList.add('hidden'); // Hide the menu after clicking a link
+        });
     });
 
     // --- Mobile Menu Toggle ---
     document.getElementById('menu-btn').addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
+
+
+    // --- Resume Download Button ---
+    // Ensure there is at least one download button before adding the listener
+    const downloadButtons = document.querySelectorAll('.resume-download-btn');
+    if(downloadButtons.length > 0) {
+        downloadButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const resumeUrl = 'https://drive.google.com/file/d/1qAkATXZyMM5oxOTs2NhkUhCTDqjzkhhB/view?usp=sharing'; 
+                if (resumeUrl === '#') {
+                    alert('Resume PDF path not configured yet.');
+                    return;
+                }
+                const a = document.createElement('a');
+                a.href = resumeUrl;
+                a.download = 'Manan_Tandel_Resume.pdf'; // You can customize the downloaded file name
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
+        });
+    }
 });
+
+
 
 
 
